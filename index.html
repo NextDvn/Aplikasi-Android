@@ -1,0 +1,98 @@
+<html>
+
+<head>
+  <title>Konversi Suhu</title>
+  <script type="text/javascript" src="latjs1.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konversi Suhu</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+
+  <style>
+  body {
+    background-image: url('https://media.tenor.com/images/bd67c32b1772eec3591752809715761c/tenor.gif');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+  </style>
+
+  <script type="text/javascript">
+  function cel() {
+    var x = celcius.val1.value
+    hasil = (x / 100) * 80;
+    document.getElementById("hasil").innerHTML = "Hasil : " + hasil + " Reamur";
+    document.getElementById("persen").style.width = x + "%";
+  }
+
+  function kel() {
+
+    x = eval(celcius.val1.value);
+    k = x + 273;
+
+    document.getElementById("hasil").innerHTML = "Hasil : " + k + " Kelvin";
+    document.getElementById("persen").style.width = x + "%";
+  }
+
+  function far() {
+    x = eval(celcius.val1.value);
+    k = (9 / 5 * x) + 32;
+    document.getElementById("hasil").innerHTML = "Hasil : " + k + " Farenheit";
+    document.getElementById("persen").style.width = x + "%";
+  }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card col-sm-6">
+      <div class="card-header bg-primary text-white text-center">
+        KONVERSI SUHU
+      </div>
+
+      <div class="card-body">
+        <form name="celcius">
+          <div class="form-group">
+            <label>Masukan Derajat Celcius</label>
+            <input class="form-control" name="val1">
+          </div>
+
+          <div class="btn-group">
+            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+              Pilih Konversi Suhu
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" name="ll" onclick="cel()" value="Konversi">Reamur</a>
+              <a class="dropdown-item" name="ll" onclick="kel()" value="Konversi">Kelvin</a>
+              <a class="dropdown-item" name="ll" onclick="far()" value="Konversi">Farenheit</a>
+            </div>
+          </div>
+
+          <br><br>
+
+          <div id="hasil" class="alert alert-info">
+            Hasil :
+          </div>
+        </form>
+      </div>
+      <div class="col-12 footer">
+        <strong>© Rumus by Wafik Ulinnuha</strong>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+</script>
